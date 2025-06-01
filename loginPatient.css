@@ -1,0 +1,132 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #F5F5F5;
+    padding-top: 80px; /* Ensure space for the navbar */
+}
+
+.navbar {
+    background-color: #0A1931;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.btn-custom {
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: none;
+}
+
+.emergency-button {
+    background-color: red;
+}
+
+.login-button {
+    background-color: #2A9D8F;
+}
+
+.register-button {
+    background-color: #F4A261;
+}
+
+/* Centering the login container */
+.login-container {
+    width: 80%; /* Set width to 80% of screen */
+    max-width: 800px; /* Optional: to prevent stretching on large screens */
+    margin: 50px auto; /* Center the container */
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #0A1931;
+}
+
+.login-header {
+    text-align: center;
+    color: #0A1931;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn-login {
+    background-color: #0A1931;
+    color: white;
+    border: none;
+    width: 100%;
+}
+
+.btn-login:hover, .btn-login:active {
+    background-color: #2A9D8F;
+}
+
+.forgot-password-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot-password-option {
+    margin-top: 10px;
+    display: none;
+}
+
+.password-reset-container {
+    margin-top: 20px;
+    display: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+/*To visibility on small screens*/
+.navbar {
+    background-color: #0A1931;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu {
+    background-color: #0A1931;
+    border: none;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: white !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #2A9D8F;
+}
+
+.container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+}

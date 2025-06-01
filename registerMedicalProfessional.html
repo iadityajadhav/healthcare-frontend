@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Professional Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="registerMedicalProfessional.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="landingPage.html">MedVision</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item"><a class="nav-link" href="landingPage.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="landingPage.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="landingPage.html#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="landingPage.html#help">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" href="landingPage.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="d-flex">
+                <button class="btn btn-custom emergency-button">Emergency Scan</button>
+                <div class="dropdown">
+                    <button class="btn btn-custom login-button dropdown-toggle" data-bs-toggle="dropdown">Login</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="loginPatient.html">Patient</a></li>
+                        <li><a class="dropdown-item" href="loginMedicalProfessional.html">Medical Professional</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-custom register-button-navbar dropdown-toggle" data-bs-toggle="dropdown">Register</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="registerPatient.html">Patient</a></li>
+                        <li><a class="dropdown-item" href="registerMedicalProfessional.html">Medical Professional</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Registration Form -->
+    <div class="container">
+        <h2 class="text-center">Register as Medical Professional</h2>
+        <form>
+            <!-- Basic Details -->
+            <div class="form-section">Basic Details</div>
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Middle Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Contact</label>
+                <input type="tel" class="form-control" id="contactField" required>
+                <button type="button" class="btn btn-sm btn-grey mt-1" id="sendOtpContact">Send OTP</button>
+                <div class="otp-input-container" id="otpContactContainer">
+                    <input type="text" class="form-control mt-2" id="otpContact" placeholder="Enter OTP">
+                    <button type="button" class="btn btn-sm btn-success mt-2" id="verifyOtpContact">Verify OTP</button>
+                    <button type="button" class="btn btn-sm btn-warning mt-2" id="resendOtpContact">Resend OTP</button>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailField" required>
+                <button type="button" class="btn btn-sm btn-grey mt-1" id="sendOtpEmail">Send OTP</button>
+                <div class="otp-input-container" id="otpEmailContainer">
+                    <input type="text" class="form-control mt-2" id="otpEmail" placeholder="Enter OTP">
+                    <button type="button" class="btn btn-sm btn-success mt-2" id="verifyOtpEmail">Verify OTP</button>
+                    <button type="button" class="btn btn-sm btn-warning mt-2" id="resendOtpEmail">Resend OTP</button>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" required></textarea>
+            </div>
+
+            <!-- Essential Details -->
+            <div class="form-section">Essential Details</div>
+	        <div class="mb-3">
+                <label class="form-label">NMC PRN/Liscense Number</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Aadhar Number</label>
+                <input type="text" class="form-control" id="aadharField" required>
+                <div class="invalid-feedback">Aadhar number must be exactly 12 digits.</div>
+            </div>            
+
+            <!-- Qualification & Working Details -->
+            <div class="form-section">Qualification & Working Details</div>
+
+            <!-- Qualification Container -->
+            <div id="qualification-container">
+                <div class="qualification-group" id="qualification-group-1">
+                    <label class="form-label">Qualification/Degree</label>
+                    <input type="text" class="form-control qualification-field" placeholder="Enter Qualification/Degree" required>
+
+                    <label class="form-label mt-2">Qualification/Degree Certificate</label>
+                    <input type="file" class="form-control certificate-field" accept="image/*,application/pdf" required>
+
+                    <label class="form-label mt-2">University/College Name</label>
+                    <input type="text" class="form-control university-field" placeholder="Enter University/College Name" required>
+                </div>
+            </div>
+
+            <!-- Buttons for adding/removing fields -->
+            <button type="button" class="btn btn-sm btn-success mt-2" id="add-qualification">+</button>
+
+            <!-- Experience -->
+            <div class="mb-3">
+                <label class="form-label">Experience</label>
+                <input type="text" class="form-control" id="experience" required>
+            </div>
+
+            <!-- Hospital Name -->
+            <div class="mb-3">
+                <label class="form-label">Hospital Name</label>
+                <input type="text" class="form-control" id="hospital-name" required>
+            </div>
+
+            <!-- Practice Location -->
+            <div class="mb-3">
+                <label class="form-label">Practice Location</label>
+                <input type="text" class="form-control" id="practice-location" required>
+            </div>
+
+
+            <!-- Upload Documents -->
+            <div class="form-section">Upload Documents</div>
+            <div class="mb-3">
+                <label class="form-label">Photo</label>
+                <input type="file" class="form-control" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sign</label>
+                <input type="file" class="form-control" accept="image/*">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Aadhar Card</label>
+                <input type="file" class="form-control" accept="image/*,application/pdf">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Medical Liscense</label>
+                <input type="file" class="form-control" accept="image/*,application/pdf">
+            </div>
+
+            <!-- Set Password -->
+            <div class="form-section">Set Password</div>
+            <div class="mb-3">
+                <label class="form-label" for="passwordField">Enter Password</label>
+                <input type="password" class="form-control" id="passwordField" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="confirmPasswordField">Confirm Password</label>
+                <input type="password" class="form-control" id="confirmPasswordField" required>
+            </div>
+
+            <button type="button" class="btn btn-success mt-3" id="validatePasswordBtn">Validate Password</button><br><br>
+
+            <!-- The Register Button -->
+            <button type="submit" class="btn register-button w-100 mb-3">Register</button>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="registerMedicalProfessional.js"></script>
+</body>
+</html>

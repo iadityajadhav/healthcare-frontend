@@ -1,0 +1,174 @@
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #0A1931;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+  }
+  .navbar .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar .dropdown-menu {
+    background-color: #0A1931;
+    border: none;
+  }
+  .navbar .dropdown-menu .dropdown-item {
+    color: white !important;
+  }
+  .navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #2A9D8F;
+  }
+  .btn-custom {
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: none;
+  }
+  .emergency-button {
+    background-color: red;
+  }
+  .login-button {
+    background-color: #2A9D8F;
+  }
+  .register-button {
+    background-color: #F4A261;
+  }
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+  .hero-text {
+    color: #0A1931;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  .hero-subtext {
+    color: #0A1931;
+    font-size: 1.2rem;
+  }
+  .carousel-inner {
+    text-align: center;
+  }
+  .carousel-item {
+    color: white;
+    padding: 3rem;
+  }
+  .feature-item {
+    background-color: #F5F5F5;
+    color: #0A1931;
+    border: 2px solid #0A1931;
+    border-radius: 15px;
+    padding: 2rem;
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .carousel:hover .carousel-item {
+    animation-play-state: paused;
+  }
+
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #0A1931;
+  }
+
+  /* New styles for bold headings */
+  h1, h2, h3 {
+    font-weight: bold;
+  }
+
+  /* Styling for About section paragraph */
+  .about-section p {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #0A1931;
+    background-color: white;
+    padding: 1.5rem;
+    border: 2px solid #0A1931;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .contact-form input, .contact-form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  section {
+    scroll-margin-top: 90px;
+  }
+
+  .contact-form button {
+    background-color: #0A1931;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .contact-form button:hover {
+    background-color: #2A9D8F;
+  }
+
+  /* Styling for Help section steps */
+  .help-steps {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: white;
+    padding: 2rem;
+    border: 2px solid #0A1931;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .help-steps .step {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #0A1931;
+    font-weight: bold;
+  }
+
+  /*Since container-fluid stretches the layout, ensure content doesn’t touch the edges by adding padding.*/
+  .container-fluid {
+      padding-left: 5%;
+      padding-right: 5%;
+  }

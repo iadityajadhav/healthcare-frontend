@@ -1,0 +1,152 @@
+body {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0A1931;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+.navbar .dropdown-menu {
+    background-color: #0A1931;
+    border: none;
+}
+.navbar .dropdown-menu .dropdown-item {
+    color: white !important;
+}
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #2A9D8F;
+}
+.btn-custom {
+    font-weight: bold;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: none;
+}
+.emergency-button {
+    background-color: red;
+}
+.login-button {
+    background-color: #2A9D8F;
+}
+.register-button-navbar {
+    background-color: #F4A261; /* Default color for the navbar's register button */
+}
+.register-button {
+    background-color: #2A9D8F;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+.register-button:hover {
+    background-color: #66C8B1;
+}
+.register-button:focus,
+.register-button:active {
+    background-color: #2A9D8F;
+    box-shadow: none;
+}
+.container {
+    margin-top: 120px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #0A1931;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-height: 80vh;
+    margin-bottom: 120px;
+}
+.form-section {
+    background-color: #0A1931;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+.btn-grey {
+    background-color: grey;
+    border: none;
+    color: white;
+}
+.input-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.otp-input-container {
+    display: none;
+    margin-top: 10px;
+}
+
+.verified {
+    border: 2px solid #66C8B1; /* Green border when OTP is verified */
+    box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.5);
+}
+
+
+/* Optional: You can style the new fields if needed */
+#qualification-container input, #certificate-container input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#add-qualification, #add-certificate {
+    margin-top: 10px;
+}
+
+/*For visibility on small screens*/
+.navbar {
+    background-color: #0A1931;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .dropdown-menu {
+    background-color: #0A1931;
+    border: none;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: white !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #2A9D8F;
+}
+
+.container-fluid {
+    padding-left: 5%;
+    padding-right: 5%;
+}
